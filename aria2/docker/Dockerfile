@@ -11,7 +11,9 @@ VOLUME ["/dl"]
 
 CMD ["aria2c", \
        "--dir=/dl", \
+       "--max-connection-per-server=5", \
        "--enable-rpc=true", \
        "--rpc-allow-origin-all=true", \
        "--rpc-listen-all=true", \
+       "--file-allocation=trunc", \
        "--continue=true"]

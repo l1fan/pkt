@@ -68,7 +68,8 @@
 官方文档 https://github.com/sonsea/ix-API-Docs/blob/master/quotes_websocket_api.md
 
 使用时调用 `ws://ws.bicoin.com.cn/ix`  
-订阅， 目前仅支持订阅永续合约 `FUTURE_BTCUSD`
-- 价格 `/ticker/FUTURE_BTCUSD`    eg: `ws://ws.bicoin.com.cn/ix/ticker/FUTURE_BTCUSD`
-- 深度 `/orderbook/FUTURE_BTCUSD`
-- 交易 `/deal/FUTURE_BTCUSD`
+订阅， 目前仅支持订阅永续合约 `FUTURE_BTCUSD` 
+- 价格 `/ticker/FUTURE_BTCUSD/`    eg: `ws://ws.bicoin.com.cn/ix/ticker/FUTURE_BTCUSD/`
+- K线 `/history/FUTURE_BTCUSD/{period}`  结尾不加`/`
+- 深度 `/orderbook/FUTURE_BTCUSD/`
+- 交易 `/deal/FUTURE_BTCUSD/`

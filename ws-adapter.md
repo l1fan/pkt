@@ -15,7 +15,7 @@
 ## API接口
 
 ### OKEx
-文档接口 https://www.okex.me/docs/zh/#futures_ws-all
+官方文档接口 https://www.okex.me/docs/zh/#futures_ws-all
 
 使用时调用 `ws://ws.bicoin.com.cn/okex`  
 支持订阅的频道 
@@ -25,7 +25,7 @@
 - 交割/永续交易 `futures/trade` , `swap/trade`
 
 ### Bitmex
-文档 https://www.bitmex.com/app/apiOverview
+官方文档 https://www.bitmex.com/app/apiOverview
 
 使用时调用 `ws://ws.bicoin.com.cn/bitmex`  
 支持订阅
@@ -34,7 +34,7 @@
 - 交易 `trade`
 
 ### Huobi
-文档 https://huobiapi.github.io/docs/spot/v1/cn/#websocket
+官方文档 https://huobiapi.github.io/docs/spot/v1/cn/#websocket
 
 使用时调用 `ws://ws.bicoin.com.cn/huobi`  
 支持订阅
@@ -44,7 +44,7 @@
 - 交易 `market.$symbol.trade.detail`
 
 ### Binance
-文档 https://github.com/binance-exchange/binance-official-api-docs/blob/master/web-socket-streams_CN.md
+官方文档 https://github.com/binance-exchange/binance-official-api-docs/blob/master/web-socket-streams_CN.md
 
 使用时调用 `ws://ws.bicoin.com.cn/binance?streams=`  
 支持订阅
@@ -52,7 +52,7 @@
 - `<symbol>@depth5`
 
 ### Bibox
-文档 https://github.com/Biboxcom/API_Docs/wiki/WS_API_Reference
+官方文档 https://github.com/Biboxcom/API_Docs/wiki/WS_API_Reference
 
 使用时调用 `ws://ws.bicoin.com.cn/bibox`  
 支持订阅
@@ -65,7 +65,7 @@
 
 
 ### IX
-文档 https://github.com/sonsea/ix-API-Docs/blob/master/quotes_websocket_api.md
+官方文档 https://github.com/sonsea/ix-API-Docs/blob/master/quotes_websocket_api.md
 
 使用时调用 `ws://ws.bicoin.com.cn/ix`  
 订阅， 目前仅支持订阅永续合约 `FUTURE_BTCUSD`

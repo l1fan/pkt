@@ -19,6 +19,7 @@
 
 使用时调用 `ws://ws.bicoin.com.cn/okex`  
 支持订阅的频道 
+- 指数价格 `index/ticker`
 - 交割/永续价格 `futures/ticker` , `swap/ticker`
 - 交割/永续深度 `futures/depth5` , `swap/depth5`
 - 交割/永续K线 `futures/candle60s` ... `futures/candle604800s` , `swap/candle60s` ... `swap/candle604800s`
@@ -68,8 +69,10 @@
 官方文档 https://github.com/sonsea/ix-API-Docs/blob/master/quotes_websocket_api.md
 
 使用时调用 `ws://ws.bicoin.com.cn/ix`  
-订阅， 目前仅支持订阅永续合约 `FUTURE_BTCUSD` 
-- 价格 `/ticker/FUTURE_BTCUSD/`    eg: `ws://ws.bicoin.com.cn/ix/ticker/FUTURE_BTCUSD/`
-- K线 `/history/FUTURE_BTCUSD/{period}`  结尾不加`/`
-- 深度 `/orderbook/FUTURE_BTCUSD/`
-- 交易 `/deal/FUTURE_BTCUSD/`
+目前仅支持订阅永续合约 `FUTURE_BTCUSD` ,
+订阅方式与官网不同, 建立连接后发送订阅信息`{"op":"subscribe","args":["ticker:FUTURE_BTCUSD", ...]}` , 取消订阅时`op`为`unsubscribe`
+- 价格 `ticker:FUTURE_BTCUSD`    
+- K线 `history/{period}:FUTURE_BTCUSD`  period参照官网
+- 深度 `orderbook:FUTURE_BTCUSD`
+- 交易 `deal:FUTURE_BTCUSD`
+

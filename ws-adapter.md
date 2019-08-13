@@ -13,6 +13,7 @@
 ```
 
 ## API接口
+项目相当于websocket的桥接，不做过多的数据处理，发送的订阅请求和返回数据也基本按照官网格式(有区别的会在下方具体标明)
 
 ### OKEx
 官方文档接口 https://www.okex.me/docs/zh/#futures_ws-all
@@ -69,10 +70,19 @@
 官方文档 https://github.com/sonsea/ix-API-Docs/blob/master/quotes_websocket_api.md
 
 使用时调用 `ws://ws.bicoin.com.cn/ix`  
-目前仅支持订阅永续合约 `FUTURE_BTCUSD` ,
+目前仅支持订阅永续合约 `FUTURE_BTCUSD` ,`FUTURE_ETHUSD`    
 订阅方式与官网不同, 建立连接后发送订阅信息`{"op":"subscribe","args":["ticker:FUTURE_BTCUSD", ...]}` , 取消订阅时`op`为`unsubscribe`
 - 价格 `ticker:FUTURE_BTCUSD`    
 - K线 `history/{period}:FUTURE_BTCUSD`  period参照官网
 - 深度 `orderbook:FUTURE_BTCUSD`
 - 交易 `deal:FUTURE_BTCUSD`
 
+
+### BFX
+官网 https://www.bfx.nu/h5/index.html#/   > 没有文档,可以用开发者工具查看接口  
+合约交易symbol接口 `https://www.bfx.nu/commonApi/partitions.do`
+
+使用时调用 `ws://ws.bicoin.com.cn/bfx`    
+订阅，只支持合约
+- 价格，深度，交易 `{"sub":"trade.contract.{symbol}"}`  eg: `{"sub":"trade.contract.btc"}`
+  返回的数据里有价格，深度，交易数据。 取消订阅时将 `sub` 改为 `unsub`
